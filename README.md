@@ -19,6 +19,9 @@ This project is active again.
 Optional:
 Run
 + touch ~/.gradle/gradle.properties && echo "org.gradle.daemon=true" >> ~/.gradle/gradle.properties
++ echo "org.gradle.parallel=true" >> ~/.gradle/gradle.properties
++ echo "org.gradle.configureondemand=true" >> ~/.gradle/gradle.properties
+
 
 and finally run our script
 + cd to the husky_kinetic/RobotCA and run ./build.sh
