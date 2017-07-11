@@ -26,6 +26,11 @@ anythingElse () {
 		esac
 	done ;
 }
+
+echo " "
+echo " "
+echo "Please select one of the following options:"
+echo " "
 select build in "Build" "Clean" "Exit"; do
 	case $build in
 		"Build" ) build; anythingElse; break;;
