@@ -23,6 +23,11 @@ Run
 and finally run our script
 + cd to the husky_kinetic/RobotCA and run ./build.sh
 
+#### Troubleshoot
+
+If you get aapt exited with code 127 ,please run
+sudo apt-get install lib32z1 lib32ncurses5 lib32stdc++6
+
 #### University of South Carolina  
 ###### CSCE 490 & 492 Capstone Design  
 
