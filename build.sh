@@ -5,10 +5,15 @@ BUILD_DIR=src/android_foo
 
 build() {
 	cd $BUILD_DIR
-	./gradlew build
+	./gradlew build 
 	cd ../..
 }
 
+buildDebug() {
+	cd $BUILD_DIR
+	./gradlew build --debug
+	cd ../..
+}
 clean() {
 	rm -rf src/android_foo/control_app/build
 	rm -rf src/android_foo/control_app_lib/build
@@ -33,9 +38,10 @@ echo " "
 echo " "
 echo "Please select one of the following options:"
 echo " "
-select build in "Build" "Clean" "Exit"; do
+select build in "Build" "Build with debug" "Clean" "Exit"; do
 	case $build in
 		"Build" ) build; anythingElse; break;;
+		"Build with debug" ) buildDebug; anythingElse; break;;
 		"Clean" ) clean; anythingElse; break;;
 		"Exit" ) exit 0; break;;
 	esac
