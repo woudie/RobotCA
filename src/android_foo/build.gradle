@@ -67,9 +67,6 @@ subprojects {
                 exclude "META-INF/LICENSE.txt"
                 exclude "META-INF/NOTICE.txt"
             }
-	    lintOptions {
-  		abortOnError false
-	    }
         }
     }
 }

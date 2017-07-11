@@ -5,7 +5,7 @@ BUILD_DIR=src/android_foo
 
 build() {
 	cd $BUILD_DIR
-	./gradlew build 
+	./gradlew build -x lint
 	cd ../..
 }
 
