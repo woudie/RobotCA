@@ -15,6 +15,7 @@ buildDebug() {
 	cd ../..
 }
 clean() {
+	rm -rf src/android_foo/build
 	rm -rf src/android_foo/control_app/build
 	rm -rf src/android_foo/control_app_lib/build
 	cd $BUILD_DIR
