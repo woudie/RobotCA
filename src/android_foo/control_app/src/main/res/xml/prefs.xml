@@ -176,6 +176,20 @@
         android:key="@string/prefs_hosts_settings_key"
         android:summary="@string/prefs_hosts_settings_summary"
         android:title="@string/hosts__pref_title">
+
+        <com.robotca.ControlApp.Views.BetterEditTextPreference
+            android:defaultValue="&gt;IP&lt; &gt;Hostname&lt;"
+            android:key="edittext_hosts_detail"
+            android:singleLine="true"
+            android:summary="@string/hosts_detail_pref_summary"
+            android:title="@string/hosts_detail_pref_title" />
+
+        <EditTextPreference
+            android:key="hosts_text_pref"
+            android:title="@string/hosts_textbox"
+            android:icon="@drawable/ic_edit_black_24dp"
+            />
+
     </PreferenceScreen>
 
 </PreferenceScreen>

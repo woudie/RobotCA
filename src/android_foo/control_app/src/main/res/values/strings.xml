@@ -170,6 +170,9 @@
     <string name="prefs_hosts_settings_key">prefs_hosts_settings</string>
     <string name="prefs_hosts_settings_summary">Add host name</string>
     <string name="hosts__pref_title">Host names</string>
+    <string name="hosts_detail_pref_summary">Add a custom host name</string>
+    <string name="hosts_detail_pref_title">Host name addition</string>
+    <string name="hosts_textbox">Hosts:</string>
 
     <string name="reverse_angle_reading_summary_off"><![CDATA[Invert Angle Reading (Min->Max Angle)]]></string>
     <string name="reverse_angle_reading_summary_on"><![CDATA[Invert Angle Reading (Max->Min Angle)]]></string>
