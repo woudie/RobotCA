@@ -171,4 +171,11 @@
             android:title="@string/invert_angular_velocity_title" />
     </PreferenceScreen>
 
+    <PreferenceScreen
+        android:icon="@drawable/ic_settings_hosts_black_24dp"
+        android:key="@string/prefs_hosts_settings_key"
+        android:summary="@string/prefs_hosts_settings_summary"
+        android:title="@string/hosts__pref_title">
+    </PreferenceScreen>
+
 </PreferenceScreen>

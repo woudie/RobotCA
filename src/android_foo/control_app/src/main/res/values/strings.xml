@@ -166,6 +166,11 @@
     <string name="prefs_advanced_control_settings_key">prefs_advanced_control_settings</string>
     <string name="prefs_advanced_control_settings_summary">Edit advanced control settings</string>
     <string name="advanced_controls__pref_title">Advanced Controls</string>
+
+    <string name="prefs_hosts_settings_key">prefs_hosts_settings</string>
+    <string name="prefs_hosts_settings_summary">Add host name</string>
+    <string name="hosts__pref_title">Host names</string>
+
     <string name="reverse_angle_reading_summary_off"><![CDATA[Invert Angle Reading (Min->Max Angle)]]></string>
     <string name="reverse_angle_reading_summary_on"><![CDATA[Invert Angle Reading (Max->Min Angle)]]></string>
     <string name="reverse_angle_reading_title">Invert Laser Scan</string>
