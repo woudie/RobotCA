@@ -27,7 +27,7 @@ public class SplashActivity extends Activity {
 	//SuperSU handle
 	Process p; 
 	try { 
-   		p = Runtime.getRuntime().exec("su"); 
+   		p = Runtime.getRuntime().exec("su");
 	} catch ( Exception e ) {
 		Log.e(TAG, "Could not get Root Access.", e);
 	}
@@ -35,6 +35,7 @@ public class SplashActivity extends Activity {
         //checkDrawOverlayPermission();
         goToNextActivity(1000L);
     }
+
 
     /**
      * Checks for draw overlay permissions. Required on higher levels of Android.
