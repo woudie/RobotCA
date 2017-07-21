@@ -11,13 +11,13 @@
 <h2><font color="#000044">Using a Simulated Robot</font></h2>
 <p>It is likely easier to access a simulated robot rather than a real one, so follow these steps to set up a simulation</p>
 
-<h4><font color="#000044">Step 1: Installing Ubuntu 14.04.3</font></h4>
-<p>Download a 32 or 64 bit Ubuntu 14.04.3 iso, either will work, and install it on a physical computer or a virtual machine. The robot will move much much smoother if Ubuntu 14.04.3 is installed to a physical computer.</p>
+<h4><font color="#000044">Step 1: Installing Ubuntu 16.04.x or newer</font></h4>
+<p>Download a 32 or 64 bit Ubuntu iso, either will work, and install it on a physical computer or a virtual machine. The robot will move much much smoother if Ubuntu 14.04.3 is installed to a physical computer.</p>
 <p>Note: If installing Ubuntu on a virtual machine, make sure that you use a Bridged Network Adapter and <b>NOT</b> a NAT adapter.</p>
 
-<h4><font color="#000044">Step 2: Installing ROS Indigo</font> </h4>
+<h4><font color="#000044">Step 2: Installing ROS Kinetic</font> </h4>
 <p>Once you have Ubuntu installed, follow these instructions to install ROS Indigo on your machine.</p>
-<a href="http://wiki.ros.org/indigo/Installation/Ubuntu"> http://wiki.ros.org/indigo/Installation/Ubuntu</a>
+<a href="http://wiki.ros.org/kinetic/Installation/Ubuntu"> http://wiki.ros.org/indigo/Installation/Ubuntu</a>
 
 <h4><font color="#000044">Step 3: Installing the Husky Robot Simulator</font></h4>
 <p>To install the simulator open a terminal and run the command <b>sudo apt-get install ros-indigo-husky-simulator</b></p>
@@ -30,7 +30,7 @@ To set it up follow the instruction links from the link below to our GitHub page
 
 <h4><font color="#000044">Step 5: Launching the Simulator</font> </h4>
 <p>To begin open a terminal and run the command <b>ifconfig</b>, then run the command <b>export ROS_IP="the IP address of wlan0".</b>
-Once you have done that, start ROS in the same terminal using the command <b>roscore&</b>. If you chose to set up the camera you can start it using <b>roslaunch ./camera_node.launch&</b>. Finally start the husky simulator using the command <b>roslaunch husky_gazebo husky_playpen.launch&</b>.</p>
+Once you have done that, start ROS in the same terminal using the command <b>roscore</b>. If you chose to set up the camera you can start it using <b>roslaunch ./camera_node.launch</b>. Finally start the husky simulator using the command <b>roslaunch husky_gazebo husky_playpen.launch</b>.</p>
 <p>Note: Sometimes, on the very first launch of the husky simulator ever it may not work. That's okay, just re-run the command to start it and it should work.</p>
 
 <h4><font color="#000044">Step 6: Connecting to the Simulated Robot</font> </h4>
