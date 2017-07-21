@@ -6,7 +6,6 @@ This project is active again.
 ###### Prepare your distro for compile:
 
 + Download Android Studio from https://developer.android.com/studio/index.html#linux-bundle
-+ Run the bin/studio.sh script
 + Follow the introduction until you reach the IDE
 + Save the SDK to /home/android_sdk
 + Open SDK Manager (Press the icon with blue arrow and android logo on tool bar)
@@ -15,6 +14,9 @@ This project is active again.
 + Select 21.1.2 and 26.0.0 
 + Press apply and ok
 + Accept the license and let it download the required files
++ Run the android studio: . /path/to/studio/bin/studio.sh
++ File->Open->RobotCA/src/android_foo
++ Wait gradle to be initialized
 
 Optional:
 Run
