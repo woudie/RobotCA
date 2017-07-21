@@ -15,7 +15,7 @@ gen/
 # Gradle files
 .gradle/
 build/
-.idea/
+.idea/*
 **/.idea/libraries
 **/.idea/modules.xml
 *.iml
