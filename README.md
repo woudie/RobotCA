@@ -1,5 +1,35 @@
 # RobotCA
-### No longer actively maintained. Feel free to fork or make a PR.
+#### ROS-autom Team
+
+This project is active again.
+
+###### Prepare your distro for compile:
+
++ Download Android Studio from https://developer.android.com/studio/index.html#linux-bundle
++ Run the bin/studio.sh script
++ Follow the introduction until you reach the IDE
++ Save the SDK to /home/android_sdk
++ Open SDK Manager (Press the icon with blue arrow and android logo on tool bar)
++ From SDK platforms select all API levels from 26 to 22
++ From SDK Tools select 'Show package details'
++ Select 21.1.2 and 26.0.0 
++ Press apply and ok
++ Accept the license and let it download the required files
+
+Optional:
+Run
++ touch ~/.gradle/gradle.properties && echo "org.gradle.daemon=true" >> ~/.gradle/gradle.properties
++ echo "org.gradle.parallel=true" >> ~/.gradle/gradle.properties
++ echo "org.gradle.configureondemand=true" >> ~/.gradle/gradle.properties
+
+
+and finally run our script
++ cd to the husky_kinetic/RobotCA and run ./build.sh
+
+#### Troubleshoot
+
+If you get aapt exited with code 127 ,please run
+sudo apt-get install lib32z1 lib32ncurses5 lib32stdc++6
 
 #### University of South Carolina  
 ###### CSCE 490 & 492 Capstone Design  
