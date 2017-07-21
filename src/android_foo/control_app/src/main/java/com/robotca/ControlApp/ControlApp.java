@@ -596,7 +596,7 @@ public class ControlApp extends RosActivity implements ListView.OnItemClickListe
 
                 fragment = new AboutFragment();
                 fragmentsCreatedCounter = fragmentsCreatedCounter + 1;
-
+		break;
             default:
                 break;
         }
