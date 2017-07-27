@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--ROS autom team-->
+    <string name="hosts_edit_summary">Edit hostnames</string>
+    <string name="hosts_edit_title">Edit the /etc/hosts file.ROOT REQUIRED</string>
+
+
     <!-- App name -->
     <string name="app_name">ROS Control</string>
 
@@ -110,6 +115,7 @@
         <item>Robot</item>
         <item>Map</item>
         <item>Preferences</item>
+        <item>Hosts</item>
         <item>About</item>
     </string-array>
 
@@ -183,5 +189,6 @@
     <string name="invert_x_axis_prompt">Invert X-axis:</string>
     <string name="invert_y_axis_prompt">Invert Y-axis:</string>
     <string name="invert_angular_velocity_prompt">Invert Ang. Vel:</string>
+    <string name="title_activity_hostnames">Hostnames</string>
 
 </resources>

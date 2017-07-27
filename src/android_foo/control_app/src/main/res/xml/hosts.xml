@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Hosts">
+
+    <PreferenceScreen
+        android:summary="@string/hosts_edit_summary"
+        android:title="@string/hosts_edit_title">
+        <intent android:action="com.robotca.ControlApp.Hostnames"/>
+    </PreferenceScreen>
+
+
+
+</PreferenceScreen>
