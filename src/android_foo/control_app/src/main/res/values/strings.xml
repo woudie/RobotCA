@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- App name -->
-    <string name="app_name">ROS Control</string>
+    <!-- ROS autom team -->
+    <string name="hosts_edit_title">Edit hostnames</string>
+    <string name="hosts_edit_summary">Edit the /etc/hosts file.ROOT REQUIRED</string>
+    <string name="title_activity_hostnames">Hostnames</string>
 
+    <string name="app_name">ROS Control</string>
     <!-- Topic values -->
     <string name="joy_topic">/cmd_vel</string>
     <string name="camera_topic">/image_raw/compressed</string>
@@ -110,6 +113,7 @@
         <item>Robot</item>
         <item>Map</item>
         <item>Preferences</item>
+        <item>Hosts</item>
         <item>About</item>
     </string-array>
 

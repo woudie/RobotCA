@@ -55,6 +55,7 @@ import com.robotca.ControlApp.Fragments.MapFragment;
 import com.robotca.ControlApp.Fragments.OverviewFragment;
 import com.robotca.ControlApp.Fragments.PreferencesFragment;
 import com.robotca.ControlApp.Fragments.RosFragment;
+import com.robotca.ControlApp.Fragments.HostsFragment;
 
 import org.ros.android.RosActivity;
 import org.ros.node.NodeConfiguration;
@@ -223,6 +224,7 @@ public class ControlApp extends RosActivity implements ListView.OnItemClickListe
                 R.drawable.ic_navigation_black_24dp,
                 R.drawable.ic_terrain_black_24dp,
                 R.drawable.ic_settings_black_24dp,
+                R.drawable.ic_flag_black_24dp,
                 R.drawable.ic_info_outline_black_24dp
         };
 
@@ -567,8 +569,24 @@ public class ControlApp extends RosActivity implements ListView.OnItemClickListe
                 fragment = new PreferencesFragment();
                 fragmentsCreatedCounter = fragmentsCreatedCounter + 1;
                 break;
-
             case 6:
+                if (joystickFragment != null)
+                    joystickFragment.hide();
+                if (hudFragment != null) {
+                    hudFragment.hide();
+
+                    boolean stop = controller.getMotionPlan() == null || !controller.getMotionPlan().isResumable();
+                    stop &= !controller.hasPausedPlan();
+                    hudFragment.toggleEmergencyStopUI(stop);
+                }
+
+                setActionMenuEnabled(false);
+                stopRobot(false);
+
+                fragment = new HostsFragment();
+                fragmentsCreatedCounter = fragmentsCreatedCounter + 1;
+                break;
+            case 7:
                 if (joystickFragment != null)
                     joystickFragment.hide();
                 if (hudFragment != null) {
@@ -584,7 +602,7 @@ public class ControlApp extends RosActivity implements ListView.OnItemClickListe
 
                 fragment = new AboutFragment();
                 fragmentsCreatedCounter = fragmentsCreatedCounter + 1;
-		break;
+		        break;
             default:
                 break;
         }
