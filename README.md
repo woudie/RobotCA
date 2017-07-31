@@ -1,4 +1,9 @@
 # RobotCA
+
+# =======================
+# NEVER ALLOW ANDROID STUDIO TO UPDATE YOUR BUILD TOOLS.SELECT 'DO NOT ASK AGAIN FOR THIS PROJECT
+# =======================
+
 #### ROS-autom Team
 
 This project is active again.
