@@ -24,18 +24,9 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
-        //SuperSU handle
-	Process p; 
-	try { 
-   		p = Runtime.getRuntime().exec("su");
-	} catch ( Exception e ) {
-		Log.e(TAG, "Could not get Root Access.", e);
-	}
-
         //checkDrawOverlayPermission();
-        goToNextActivity(1000L);
+
+        goToNextActivity(500L);
     }
 
 

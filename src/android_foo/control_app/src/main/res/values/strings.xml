@@ -2,9 +2,6 @@
 <resources>
 
     <!-- ROS autom team -->
-    <string name="hosts_edit_title">Add hostnames</string>
-    <string name="hosts_edit_summary">Add host to the /etc/hosts file.ROOT REQUIRED.</string>
-    <string name="title_activity_hostnames">Hostnames</string>
     <string name="hosts_edit_key">hosts_key</string>
     <string name="default_host">IP HOSTNAME</string>
 
