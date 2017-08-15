@@ -37,7 +37,11 @@ and finally run our script
 
 If you get aapt exited with code 127 ,please run
 sudo apt-get install lib32z1 lib32ncurses5 lib32stdc++6
+#### Credits
 
+ros-autom team, Thessaloniki of Greece 2017
+
+Originally posted by:
 #### University of South Carolina  
 ###### CSCE 490 & 492 Capstone Design  
 
