@@ -31,7 +31,7 @@ Run
 
 
 and finally run our script
-+ cd to the husky_kinetic/RobotCA and run ./build.sh
++ cd to the android/RobotCA and run ./build.sh
 
 #### Troubleshoot
 
