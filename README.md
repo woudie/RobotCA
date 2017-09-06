@@ -36,6 +36,29 @@ Run
 
 If you get aapt exited with code 127 ,please run
 sudo apt-get install lib32z1 lib32ncurses5 lib32stdc++6
+
+#### Pin Android Studio to your launcher tab
++ Create a file called "AndroidStudio.desktop" and paste the following code:
+```
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Android Studio
+Exec="/home/YOURNAME/FOLDER_TO_IDE/bin/studio.sh" %f
+Icon=/home/YOURNAME/FOLDER_TO_IDE/bin/studio.png
+Categories=Development;IDE;
+Terminal=true
+StartupNotify=false
+StartupWMClass=jetbrains-android-studio
+Name[en_GB]=android-studio.desktop
+```
++ save it and then drag and drop that file on the launcher.
++ Click it to run the IDE.
++ When the IDE is opened right click on the new-second one icon that created on launcher
++ Press 'Lock to launcher'
++ exit the IDE
++ Remove the first icon
+
 #### Credits
 
 ros-autom team, Thessaloniki of Greece 2017
