@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- ROS autom team -->
-    <string name="hosts_edit_key">hosts_key</string>
-    <string name="default_host">IP HOSTNAME</string>
-
-    <string name="wait_for_hosts">Reading hosts...</string>
-    <string name="btn_import">Import host names</string>
-    <string name="btn_save">Save edits</string>
-
     <string name="app_name">ROS Control</string>
     <!-- Topic values -->
     <string name="joy_topic">/cmd_vel</string>
@@ -116,7 +108,6 @@
         <item>Robot</item>
         <item>Map</item>
         <item>Preferences</item>
-        <item>Hosts</item>
         <item>About</item>
     </string-array>
 

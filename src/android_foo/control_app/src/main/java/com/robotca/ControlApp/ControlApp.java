@@ -55,7 +55,6 @@ import com.robotca.ControlApp.Fragments.MapFragment;
 import com.robotca.ControlApp.Fragments.OverviewFragment;
 import com.robotca.ControlApp.Fragments.PreferencesFragment;
 import com.robotca.ControlApp.Fragments.RosFragment;
-import com.robotca.ControlApp.HostsActivity;
 
 import org.ros.android.RosActivity;
 import org.ros.node.NodeConfiguration;
@@ -65,8 +64,6 @@ import org.ros.rosjava_geometry.Vector3;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-
-import android.app.Activity;
 
 /**
  * Main Activity for the App. The RobotController manages the connection with the Robot while this
@@ -106,7 +103,6 @@ public class ControlApp extends RosActivity implements ListView.OnItemClickListe
 
     // Stuff for managing the current fragment
     private Fragment fragment = null;
-    private Activity activity = null;
 
     FragmentManager fragmentManager;
     int fragmentsCreatedCounter = 0;
@@ -228,7 +224,6 @@ public class ControlApp extends RosActivity implements ListView.OnItemClickListe
                 R.drawable.ic_navigation_black_24dp,
                 R.drawable.ic_terrain_black_24dp,
                 R.drawable.ic_settings_black_24dp,
-                R.drawable.ic_flag_black_24dp,
                 R.drawable.ic_info_outline_black_24dp
         };
 
@@ -573,24 +568,6 @@ public class ControlApp extends RosActivity implements ListView.OnItemClickListe
                 fragmentsCreatedCounter = fragmentsCreatedCounter + 1;
                 break;
             case 6:
-                if (joystickFragment != null)
-                    joystickFragment.hide();
-                if (hudFragment != null) {
-                    hudFragment.hide();
-
-                    boolean stop = controller.getMotionPlan() == null || !controller.getMotionPlan().isResumable();
-                    stop &= !controller.hasPausedPlan();
-                    hudFragment.toggleEmergencyStopUI(stop);
-                }
-
-                setActionMenuEnabled(false);
-                stopRobot(false);
-
-
-                Intent intent = new Intent(ControlApp.this, HostsActivity.class);
-                startActivity(intent);
-                break;
-            case 7:
                 if (joystickFragment != null)
                     joystickFragment.hide();
                 if (hudFragment != null) {
