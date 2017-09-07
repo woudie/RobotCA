@@ -76,7 +76,7 @@ public class RobotInfo implements Comparable<RobotInfo>, Savable {
         //id = UUID.randomUUID();
         name = "Robot" + robotCount++;
         masterUriString = "http://localhost:11311";
-        joystickTopic = "/joy_teleop/cmd_vel";
+        joystickTopic = "/cmd_vel";
         cameraTopic = "/image_raw/compressed";
         laserTopic = "/scan";
         navsatTopic = "/navsat/fix";
@@ -382,7 +382,7 @@ public class RobotInfo implements Comparable<RobotInfo>, Savable {
         id = UUID.fromString(bundle.getString(UUID_KEY, UUID.randomUUID().toString()));
         name = bundle.getString(ROBOT_NAME_KEY, "");
         masterUriString = bundle.getString(MASTER_URI_KEY, "http://localhost:11311");
-        joystickTopic = bundle.getString(JOYSTICK_TOPIC_KEY, "/joy_teleop/cmd_vel");
+        joystickTopic = bundle.getString(JOYSTICK_TOPIC_KEY, "/cmd_vel");
         cameraTopic = bundle.getString(CAMERA_TOPIC_KEY, "/image_raw/compressed");
         laserTopic = bundle.getString(LASER_SCAN_TOPIC_KEY, "/scan");
         navsatTopic = bundle.getString(NAVSAT_TOPIC_KEY, "/navsat/fix");
@@ -395,7 +395,7 @@ public class RobotInfo implements Comparable<RobotInfo>, Savable {
     }
 
     public void load(@NonNull SharedPreferences prefs) {
-        joystickTopic = prefs.getString(RobotStorage.getPreferenceKey(JOYSTICK_TOPIC_KEY), "/joy_teleop/cmd_vel");
+        joystickTopic = prefs.getString(RobotStorage.getPreferenceKey(JOYSTICK_TOPIC_KEY), "/cmd_vel");
         cameraTopic = prefs.getString(RobotStorage.getPreferenceKey(CAMERA_TOPIC_KEY), "/image_raw/compressed");
         laserTopic = prefs.getString(RobotStorage.getPreferenceKey(LASER_SCAN_TOPIC_KEY), "/scan");
         navsatTopic = prefs.getString(RobotStorage.getPreferenceKey(NAVSAT_TOPIC_KEY), "/navsat/fix");
