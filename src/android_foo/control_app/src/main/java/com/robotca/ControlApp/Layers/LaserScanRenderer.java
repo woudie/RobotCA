@@ -35,10 +35,10 @@ import sensor_msgs.LaserScan;
 public class LaserScanRenderer implements GLSurfaceView.Renderer, MessageListener<LaserScan> {
 
     // Base color of the laser scan
-    private static final Color LASER_SCAN_COLOR = Color.fromHexAndAlpha("377dfa", 0.1f);
+    private static final Color LASER_SCAN_COLOR = Color.fromHexAndAlpha("003366", 0.1f);
 
     // Color of robot position indicator
-    private static final Color ROBOT_INDICATOR_COLOR = Color.fromHexAndAlpha("1133FF", 1.0f);
+    private static final Color ROBOT_INDICATOR_COLOR = Color.fromHexAndAlpha("003366", 1.0f);
 
     // Default point size of laser scan points
     private static final float LASER_SCAN_POINT_SIZE = 10.f;
@@ -62,7 +62,7 @@ public class LaserScanRenderer implements GLSurfaceView.Renderer, MessageListene
     private int width, height;
 
     // Camera parameters
-    private static float cameraZoom = 1.0f;
+    private static float cameraZoom = 0.7f;
     private static float cameraAngle;
     private static boolean angleFollowsRobot;
     private static float xShift, yShift;
