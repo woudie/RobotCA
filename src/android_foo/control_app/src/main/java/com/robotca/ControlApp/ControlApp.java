@@ -549,7 +549,6 @@ public class ControlApp extends RosActivity implements ListView.OnItemClickListe
                 fragment = new MapFragment();
                 fragmentsCreatedCounter = fragmentsCreatedCounter + 1;
                 break;
-
             case 5:
                 if (joystickFragment != null)
                     joystickFragment.hide();
