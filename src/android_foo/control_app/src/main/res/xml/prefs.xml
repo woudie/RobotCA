@@ -84,8 +84,8 @@
         <!--android:selectable="false"/>-->
 
         <SwitchPreference
-            android:checked="true"
-            android:defaultValue="true"
+            android:checked="false"
+            android:defaultValue="false"
             android:dependency="@string/prefs_warning_checkbox_key"
             android:key="@string/prefs_warning_safemode_key"
             android:summaryOff="@string/warning_safemode_pref_summary_off"
@@ -93,8 +93,8 @@
             android:title="@string/warning_safemode_pref_title" />
 
         <SwitchPreference
-            android:checked="true"
-            android:defaultValue="true"
+            android:checked="false"
+            android:defaultValue="false"
             android:dependency="@string/prefs_warning_checkbox_key"
             android:key="@string/prefs_warning_beep_key"
             android:summaryOff="@string/warning_beep_pref_summary_off"
@@ -138,6 +138,7 @@
             android:summary="@string/random_walk_range_minimum_pref_summary"
             android:title="@string/random_walk_range_minimum_pref_title" />
 
+        <!--
         <SwitchPreference
             android:checked="true"
             android:defaultValue="true"
@@ -145,7 +146,7 @@
             android:summaryOff="@string/reverse_angle_reading_summary_off"
             android:summaryOn="@string/reverse_angle_reading_summary_on"
             android:title="@string/reverse_angle_reading_title" />
-
+        -->
         <SwitchPreference
             android:checked="false"
             android:defaultValue="false"

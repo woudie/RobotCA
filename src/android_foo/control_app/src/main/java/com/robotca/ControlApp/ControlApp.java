@@ -724,11 +724,11 @@ public class ControlApp extends RosActivity implements ListView.OnItemClickListe
     public void onPreferencesChanged(SharedPreferences prefs) {
 
         // Warning System
-        warningSystem.setEnabled(prefs.getBoolean(getString(R.string.prefs_warning_checkbox_key), true));
-        warningSystem.enableSafemode(prefs.getBoolean(getString(R.string.prefs_warning_safemode_key), true));
+        warningSystem.setEnabled(prefs.getBoolean(getString(R.string.prefs_warning_checkbox_key), false));
+        warningSystem.enableSafemode(prefs.getBoolean(getString(R.string.prefs_warning_safemode_key), false));
 
         // Beep beep
-        hudFragment.setBeepsEnabled(prefs.getBoolean(getString(R.string.prefs_warning_beep_key), true));
+        hudFragment.setBeepsEnabled(prefs.getBoolean(getString(R.string.prefs_warning_beep_key), false));
 
         // Refresh topic subscribers/publishers
         controller.refreshTopics();

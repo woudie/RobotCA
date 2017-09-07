@@ -388,7 +388,7 @@ public class RobotInfo implements Comparable<RobotInfo>, Savable {
         navsatTopic = bundle.getString(NAVSAT_TOPIC_KEY, "/navsat/fix");
         odometryTopic = bundle.getString(ODOMETRY_TOPIC_KEY, "/odometry/filtered");
         poseTopic = bundle.getString(POSE_TOPIC_KEY, "/pose");
-        reverseLaserScan = bundle.getBoolean(REVERSE_LASER_SCAN_KEY, false);
+        reverseLaserScan = bundle.getBoolean(REVERSE_LASER_SCAN_KEY, true);
         invertX = bundle.getBoolean(INVERT_X_KEY, false);
         invertY = bundle.getBoolean(INVERT_Y_KEY, false);
         invertAngularVelocity = bundle.getBoolean(INVERT_ANGULAR_VELOCITY_KEY, false);
@@ -401,7 +401,7 @@ public class RobotInfo implements Comparable<RobotInfo>, Savable {
         navsatTopic = prefs.getString(RobotStorage.getPreferenceKey(NAVSAT_TOPIC_KEY), "/navsat/fix");
         odometryTopic = prefs.getString(RobotStorage.getPreferenceKey(ODOMETRY_TOPIC_KEY), "/odometry/filtered");
         poseTopic = prefs.getString(RobotStorage.getPreferenceKey(POSE_TOPIC_KEY), "/pose");
-        reverseLaserScan = prefs.getBoolean(RobotStorage.getPreferenceKey(REVERSE_LASER_SCAN_KEY), false);
+        reverseLaserScan = prefs.getBoolean(RobotStorage.getPreferenceKey(REVERSE_LASER_SCAN_KEY), true);
         invertX = prefs.getBoolean(RobotStorage.getPreferenceKey(INVERT_X_KEY), false);
         invertY = prefs.getBoolean(RobotStorage.getPreferenceKey(INVERT_Y_KEY), false);
         invertAngularVelocity = prefs.getBoolean(RobotStorage.getPreferenceKey(INVERT_ANGULAR_VELOCITY_KEY), false);

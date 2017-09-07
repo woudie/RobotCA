@@ -199,7 +199,7 @@ public class RobotChooser extends AppCompatActivity implements AddEditRobotDialo
         final Integer _writestorage = 0x4;
         final Integer _process = 0x5;
         final Integer _audio = 0x6;
-        
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             final int MULTIPLE_REQUEST=1;
             requestPermissions(new String[] {
