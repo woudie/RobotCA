@@ -720,7 +720,7 @@ public class JoystickView extends RelativeLayout implements AnimationListener,
         LayoutInflater.from(context).inflate(R.layout.virtual_joystick, this, true);
         mainLayout = (RelativeLayout) findViewById(R.id.virtual_joystick_layout);
         magnitudeText = (TextView) findViewById(R.id.magnitude);
-        magnitudeText.setTextColor(0xFFFFFFFF);
+        magnitudeText.setTextColor(0x00FFFFFF);
         intensity = (ImageView) findViewById(R.id.intensity);
         thumbDivet = (ImageView) findViewById(R.id.thumb_divet);
         thumbDivet.setColorFilter(Color.CYAN);
