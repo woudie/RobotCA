@@ -93,7 +93,7 @@ public class JoystickView extends RelativeLayout implements AnimationListener,
      * TURN_IN_PLACE_CONFIRMATION_DELAY Time (in milliseconds) to wait before
      * visually changing to turn-in-place mode.
      */
-    private static final long TURN_IN_PLACE_CONFIRMATION_DELAY = 200L;
+    private static final long TURN_IN_PLACE_CONFIRMATION_DELAY = 10L;
     /**
      * FLOAT_EPSILON Used for comparing float values.
      */
