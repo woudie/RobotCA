@@ -16,7 +16,7 @@ This project is active again.
 + When the download is done, press on the Configure option on the bottom side and select SDK manager
 + From SDK platforms select all API levels from 26 to 22
 + From SDK Tools select 'Show package details'
-+ Select 21.1.2 and 26.0.0
++ Select 21.1.2 ,25.0.2 and 26.0.0
 + Press apply and ok
 + Accept the license and let it download the required files
 + Press ok to SDK manager and close the Android Studio
