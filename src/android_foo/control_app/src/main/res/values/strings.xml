@@ -120,7 +120,7 @@
     <string name="speed_string">%1$5.2f m/s</string>
     <string name="turnrate_string">%1$5.2f \u00B0/s</string>
     <string name="location_string">(%1$14s, %2$14s)</string>
-    <string name="map_clear_string">Clear Waypoints</string>
+    <string name="map_clear_string">Clear</string>
     <string name="map_lock_camera_string">Lock Camera Angle</string>
     <string name="control_mode">Control Mode: </string>
     <string name="robot_name">Robot Name:</string>
