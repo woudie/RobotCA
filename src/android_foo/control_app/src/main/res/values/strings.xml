@@ -109,6 +109,7 @@
         <item>Map</item>
         <item>Preferences</item>
         <item>About</item>
+        <item>Device Camera</item>
     </string-array>
 
     <!-- Drawer options -->

@@ -15,6 +15,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
@@ -57,10 +58,12 @@ import com.robotca.ControlApp.Fragments.PreferencesFragment;
 import com.robotca.ControlApp.Fragments.RosFragment;
 
 import org.ros.android.RosActivity;
+import org.ros.android.view.camera.RosCameraPreviewView;
 import org.ros.node.NodeConfiguration;
 import org.ros.node.NodeMainExecutor;
 import org.ros.rosjava_geometry.Vector3;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -224,7 +227,8 @@ public class ControlApp extends RosActivity implements ListView.OnItemClickListe
                 R.drawable.ic_navigation_black_24dp,
                 R.drawable.ic_terrain_black_24dp,
                 R.drawable.ic_settings_black_24dp,
-                R.drawable.ic_info_outline_black_24dp
+                R.drawable.ic_info_outline_black_24dp,
+                R.drawable.ic_android_black_24dp
         };
 
         List<DrawerItem> drawerItems = new ArrayList<>();
@@ -502,7 +506,6 @@ public class ControlApp extends RosActivity implements ListView.OnItemClickListe
         fragmentManager = getFragmentManager();
 
         setActionMenuEnabled(true);
-
         switch (position) {
             case 0:
                 Log.d(TAG, "Drawer item 0 selected, finishing");
@@ -583,9 +586,18 @@ public class ControlApp extends RosActivity implements ListView.OnItemClickListe
                 fragment = new AboutFragment();
                 fragmentsCreatedCounter = fragmentsCreatedCounter + 1;
 		        break;
+            case 7:
+
+                Intent i = new Intent(this,ShowCamera.class);
+                //nodeMainExecutor.execute( i. , nodeConfiguration);
+
+                startActivity(i);
+
+                break;
             default:
                 break;
         }
+
 
         drawerIndex = position;
 
@@ -595,6 +607,8 @@ public class ControlApp extends RosActivity implements ListView.OnItemClickListe
         } catch (Exception e) {
             // Ignore
         }
+
+
 
         if (fragment != null) {
             fragment.setArguments(args);
@@ -607,6 +621,8 @@ public class ControlApp extends RosActivity implements ListView.OnItemClickListe
             if (fragment instanceof Savable && savedInstanceState != null)
                 ((Savable) fragment).load(savedInstanceState);
         }
+
+
 
         // Highlight the selected item, update the title, and close the drawer
         mDrawerList.setItemChecked(position, true);
@@ -624,6 +640,8 @@ public class ControlApp extends RosActivity implements ListView.OnItemClickListe
                 return null;
             }
         }.execute();
+
+
     }
 
     @Override
