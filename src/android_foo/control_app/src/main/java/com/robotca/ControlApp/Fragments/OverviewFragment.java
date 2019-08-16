@@ -3,7 +3,6 @@ package com.robotca.ControlApp.Fragments;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,7 +59,6 @@ public class OverviewFragment extends RosFragment {
                 controller = ((ControlApp) getActivity()).getRobotController();
             }
             catch(Exception ignore){
-
             }
 
             if(controller != null){

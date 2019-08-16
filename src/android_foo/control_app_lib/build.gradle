@@ -36,11 +36,15 @@ dependencies {
 apply plugin: 'com.android.library'
 
 android {
-  compileSdkVersion 25
+  compileSdkVersion 27
   defaultConfig {
-    minSdkVersion 19
-    targetSdkVersion 25
+    minSdkVersion 16
+    targetSdkVersion 27
     versionCode 1
     versionName "1.0"
   }
+}
+dependencies {
+  // You now now add any rosjava dependencies, like so:
+  implementation 'org.ros.android_core:android_core_components:0.4.0'
 }

@@ -76,7 +76,7 @@ public class RobotInfo implements Comparable<RobotInfo>, Savable {
         //id = UUID.randomUUID();
         name = "Robot" + robotCount++;
         masterUriString = "http://localhost:11311";
-        joystickTopic = "/cmd_vel";
+        joystickTopic = "/joy_teleop/cmd_vel";
         cameraTopic = "/image_raw/compressed";
         laserTopic = "/scan";
         navsatTopic = "/navsat/fix";
@@ -382,26 +382,26 @@ public class RobotInfo implements Comparable<RobotInfo>, Savable {
         id = UUID.fromString(bundle.getString(UUID_KEY, UUID.randomUUID().toString()));
         name = bundle.getString(ROBOT_NAME_KEY, "");
         masterUriString = bundle.getString(MASTER_URI_KEY, "http://localhost:11311");
-        joystickTopic = bundle.getString(JOYSTICK_TOPIC_KEY, "/cmd_vel");
+        joystickTopic = bundle.getString(JOYSTICK_TOPIC_KEY, "/joy_teleop/cmd_vel");
         cameraTopic = bundle.getString(CAMERA_TOPIC_KEY, "/image_raw/compressed");
         laserTopic = bundle.getString(LASER_SCAN_TOPIC_KEY, "/scan");
         navsatTopic = bundle.getString(NAVSAT_TOPIC_KEY, "/navsat/fix");
         odometryTopic = bundle.getString(ODOMETRY_TOPIC_KEY, "/odometry/filtered");
         poseTopic = bundle.getString(POSE_TOPIC_KEY, "/pose");
-        reverseLaserScan = bundle.getBoolean(REVERSE_LASER_SCAN_KEY, true);
+        reverseLaserScan = bundle.getBoolean(REVERSE_LASER_SCAN_KEY, false);
         invertX = bundle.getBoolean(INVERT_X_KEY, false);
         invertY = bundle.getBoolean(INVERT_Y_KEY, false);
         invertAngularVelocity = bundle.getBoolean(INVERT_ANGULAR_VELOCITY_KEY, false);
     }
 
     public void load(@NonNull SharedPreferences prefs) {
-        joystickTopic = prefs.getString(RobotStorage.getPreferenceKey(JOYSTICK_TOPIC_KEY), "/cmd_vel");
+        joystickTopic = prefs.getString(RobotStorage.getPreferenceKey(JOYSTICK_TOPIC_KEY), "/joy_teleop/cmd_vel");
         cameraTopic = prefs.getString(RobotStorage.getPreferenceKey(CAMERA_TOPIC_KEY), "/image_raw/compressed");
         laserTopic = prefs.getString(RobotStorage.getPreferenceKey(LASER_SCAN_TOPIC_KEY), "/scan");
         navsatTopic = prefs.getString(RobotStorage.getPreferenceKey(NAVSAT_TOPIC_KEY), "/navsat/fix");
         odometryTopic = prefs.getString(RobotStorage.getPreferenceKey(ODOMETRY_TOPIC_KEY), "/odometry/filtered");
         poseTopic = prefs.getString(RobotStorage.getPreferenceKey(POSE_TOPIC_KEY), "/pose");
-        reverseLaserScan = prefs.getBoolean(RobotStorage.getPreferenceKey(REVERSE_LASER_SCAN_KEY), true);
+        reverseLaserScan = prefs.getBoolean(RobotStorage.getPreferenceKey(REVERSE_LASER_SCAN_KEY), false);
         invertX = prefs.getBoolean(RobotStorage.getPreferenceKey(INVERT_X_KEY), false);
         invertY = prefs.getBoolean(RobotStorage.getPreferenceKey(INVERT_Y_KEY), false);
         invertAngularVelocity = prefs.getBoolean(RobotStorage.getPreferenceKey(INVERT_ANGULAR_VELOCITY_KEY), false);

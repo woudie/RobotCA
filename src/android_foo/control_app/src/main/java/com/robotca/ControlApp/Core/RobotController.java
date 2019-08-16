@@ -596,9 +596,9 @@ public class RobotController implements NodeMain, Savable {
         synchronized (laserScanMutex) {
             this.laserScan = laserScan;
 
-            //boolean invertLaserScan = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(context.getString(R.string.prefs_reverse_angle_reading_key), true);
+            boolean invertLaserScan = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(context.getString(R.string.prefs_reverse_angle_reading_key), false);
 
-           // if(invertLaserScan) {
+            if(invertLaserScan) {
                 float[] ranges = this.laserScan.getRanges();
 
                 for (int i = 0; i < this.laserScan.getRanges().length / 2; i++) {
@@ -606,7 +606,7 @@ public class RobotController implements NodeMain, Savable {
                     ranges[i] = ranges[ranges.length - i - 1];
                     ranges[ranges.length - i - 1] = range;
                 }
-           // }
+            }
         }
 
         // Call the listener callbacks

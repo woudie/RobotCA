@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- App name -->
     <string name="app_name">ROS Control</string>
+
     <!-- Topic values -->
-    <string name="joy_topic">/cmd_vel</string>
+    <string name="joy_topic">/joy_teleop/cmd_vel</string>
     <string name="camera_topic">/image_raw/compressed</string>
     <string name="laser_scan_topic">/scan</string>
     <string name="odometry_topic">/odometry/filtered</string>
@@ -109,7 +111,6 @@
         <item>Map</item>
         <item>Preferences</item>
         <item>About</item>
-        <item>Device Camera</item>
     </string-array>
 
     <!-- Drawer options -->
@@ -121,7 +122,7 @@
     <string name="speed_string">%1$5.2f m/s</string>
     <string name="turnrate_string">%1$5.2f \u00B0/s</string>
     <string name="location_string">(%1$14s, %2$14s)</string>
-    <string name="map_clear_string">Clear</string>
+    <string name="map_clear_string">Clear Waypoints</string>
     <string name="map_lock_camera_string">Lock Camera Angle</string>
     <string name="control_mode">Control Mode: </string>
     <string name="robot_name">Robot Name:</string>

@@ -18,22 +18,18 @@ public class SplashActivity extends Activity {
     private static final String TAG = "SplashActivity";
 
     // Request code for Overlay permissions
-   // private static final int OVERLAY_REQUEST_CODE = 0xABCD1234;
+    private static final int OVERLAY_REQUEST_CODE = 0xABCD1234;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //checkDrawOverlayPermission();
-
-        goToNextActivity(500L);
+        checkDrawOverlayPermission();
     }
-
 
     /**
      * Checks for draw overlay permissions. Required on higher levels of Android.
      */
-    /**
     public void checkDrawOverlayPermission() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -49,12 +45,10 @@ public class SplashActivity extends Activity {
             goToNextActivity(2000L);
         }
     }
-    */
+
     /**
      * Callback for when the user has to grant overlay permissions. This only happens on high android version.
      */
-
-    /**
     @Override
     protected void onActivityResult(int requestCode, int resultCode,  Intent data) {
 
@@ -77,7 +71,6 @@ public class SplashActivity extends Activity {
             }
         }
     }
-    */
 
     /*
      * Moves to the next Activity after the specified delay.

@@ -39,17 +39,11 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.List;
 import java.util.ArrayList;
-import android.support.v4.content.ContextCompat;
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.support.v4.app.ActivityCompat;
-import android.os.Build;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.widget.Toast;
 
-import android.support.annotation.NonNull;
+
 /**
  * Activity for choosing a Robot with which to connect. The user can connect to a previously connected
  * robot or can create a new one.
@@ -82,27 +76,6 @@ public class RobotChooser extends AppCompatActivity implements AddEditRobotDialo
 
     // Log tag String
     private static final String TAG = "RobotChooser";
-
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        for(String permission: permissions){
-            if(ActivityCompat.shouldShowRequestPermissionRationale(this, permission)){
-                //denied
-                Log.e("denied", permission);
-            }else{
-                if(ActivityCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_GRANTED){
-                    //allowed
-                    Log.e("allowed", permission);
-                } else{
-                    //set to never ask again
-                    Log.e("set to never ask again", permission);
-                    //do something here.
-                }
-            }
-        }
-    }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -191,24 +164,6 @@ public class RobotChooser extends AppCompatActivity implements AddEditRobotDialo
         final boolean isFirstLaunch = PreferenceManager
                 .getDefaultSharedPreferences(this)
                 .getBoolean(FIRST_TIME_LAUNCH_KEY, true);
-
-
-        final Integer _camera = 0x1;
-        final Integer _location = 0x2;
-        final Integer _readstorage = 0x3;
-        final Integer _writestorage = 0x4;
-        final Integer _process = 0x5;
-        final Integer _audio = 0x6;
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            final int MULTIPLE_REQUEST=1;
-            requestPermissions(new String[] {
-                            Manifest.permission.READ_EXTERNAL_STORAGE,
-                            Manifest.permission.ACCESS_COARSE_LOCATION,
-                            Manifest.permission.CAMERA},
-                    MULTIPLE_REQUEST);
-        }
-
 
         // Delay the initial tutorial a little bit
         // This makes sure the view gets a good reference to the UI layout positions

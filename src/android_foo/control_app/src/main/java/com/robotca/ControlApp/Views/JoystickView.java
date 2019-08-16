@@ -93,7 +93,7 @@ public class JoystickView extends RelativeLayout implements AnimationListener,
      * TURN_IN_PLACE_CONFIRMATION_DELAY Time (in milliseconds) to wait before
      * visually changing to turn-in-place mode.
      */
-    private static final long TURN_IN_PLACE_CONFIRMATION_DELAY = 10L;
+    private static final long TURN_IN_PLACE_CONFIRMATION_DELAY = 200L;
     /**
      * FLOAT_EPSILON Used for comparing float values.
      */
@@ -720,10 +720,10 @@ public class JoystickView extends RelativeLayout implements AnimationListener,
         LayoutInflater.from(context).inflate(R.layout.virtual_joystick, this, true);
         mainLayout = (RelativeLayout) findViewById(R.id.virtual_joystick_layout);
         magnitudeText = (TextView) findViewById(R.id.magnitude);
-        magnitudeText.setTextColor(0x00FFFFFF);
+        magnitudeText.setTextColor(0xFFFFFFFF);
         intensity = (ImageView) findViewById(R.id.intensity);
         thumbDivet = (ImageView) findViewById(R.id.thumb_divet);
-        thumbDivet.setColorFilter(Color.CYAN);
+        thumbDivet.setColorFilter(Color.RED);
         orientationWidget = new ImageView[24];
         orientationWidget[0] = (ImageView) findViewById(R.id.widget_0_degrees);
         orientationWidget[1] = (ImageView) findViewById(R.id.widget_15_degrees);

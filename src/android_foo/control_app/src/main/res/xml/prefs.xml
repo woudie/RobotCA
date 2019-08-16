@@ -71,8 +71,8 @@
 
         <!-- For enabling/disabling the warning system -->
         <SwitchPreference
-            android:checked="false"
-            android:defaultValue="false"
+            android:checked="true"
+            android:defaultValue="true"
             android:key="@string/prefs_warning_checkbox_key"
             android:summaryOff="@string/warning_enable_pref_summary_off"
             android:summaryOn="@string/warning_enable_pref_summary_on"
@@ -84,8 +84,8 @@
         <!--android:selectable="false"/>-->
 
         <SwitchPreference
-            android:checked="false"
-            android:defaultValue="false"
+            android:checked="true"
+            android:defaultValue="true"
             android:dependency="@string/prefs_warning_checkbox_key"
             android:key="@string/prefs_warning_safemode_key"
             android:summaryOff="@string/warning_safemode_pref_summary_off"
@@ -93,8 +93,8 @@
             android:title="@string/warning_safemode_pref_title" />
 
         <SwitchPreference
-            android:checked="false"
-            android:defaultValue="false"
+            android:checked="true"
+            android:defaultValue="true"
             android:dependency="@string/prefs_warning_checkbox_key"
             android:key="@string/prefs_warning_beep_key"
             android:summaryOff="@string/warning_beep_pref_summary_off"
@@ -123,7 +123,7 @@
         android:summary="@string/prefs_advanced_control_settings_summary"
         android:title="@string/advanced_controls__pref_title">
         <com.robotca.ControlApp.Views.BetterEditTextPreference
-            android:defaultValue="500"
+            android:defaultValue="1"
             android:inputType="number"
             android:key="edittext_laser_scan_detail"
             android:singleLine="true"
@@ -138,15 +138,14 @@
             android:summary="@string/random_walk_range_minimum_pref_summary"
             android:title="@string/random_walk_range_minimum_pref_title" />
 
-        <!--
         <SwitchPreference
-            android:checked="true"
-            android:defaultValue="true"
+            android:checked="false"
+            android:defaultValue="false"
             android:key="@string/prefs_reverse_angle_reading_key"
             android:summaryOff="@string/reverse_angle_reading_summary_off"
             android:summaryOn="@string/reverse_angle_reading_summary_on"
             android:title="@string/reverse_angle_reading_title" />
-        -->
+
         <SwitchPreference
             android:checked="false"
             android:defaultValue="false"

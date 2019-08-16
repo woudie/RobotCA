@@ -51,7 +51,6 @@ public class PreferencesFragment extends PreferenceFragment {
         else
             Log.w(TAG, "Could not notify ControlApp!");
 
-        //super.onStop();
-        super.onPause();
+        super.onStop();
     }
 }
